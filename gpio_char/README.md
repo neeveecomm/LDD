@@ -17,14 +17,6 @@ $ sudo insmod gpio_char_drv.ko
 
 $ sudo rmmod gpio_char_drv 
 
-# To read the data from the driver
-
-$ cat /dev/udoocdev0
-
-# To write the data into the driver
-
-$ echo "data" > /dev/udoocdev0
-
 # To compile the application
 
 $ gcc -o app_gpio app_gpio.c
@@ -32,6 +24,15 @@ $ gcc -o app_gpio app_gpio.c
 $ gcc -o app_gpio_output app_gpio_output.c
 
 $ gcc -o app_gpio_input app_gpio_input.c
+
+# To run the application
+
+./app_gpio /dev/udoocdev0
+
+./app_gpio_output /dev/udoocdev0
+
+./app_gpio_input /dev/udoocdev0
+
 
 # To view the kernel log messages
 
