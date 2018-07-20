@@ -28,7 +28,9 @@ $ echo "data" > /dev/udoocdev0
 # To compile the application
 
 $ gcc -o app_gpio app_gpio.c
+
 $ gcc -o app_gpio_output app_gpio_output.c
+
 $ gcc -o app_gpio_input app_gpio_input.c
 
 # To view the kernel log messages
